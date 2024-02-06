@@ -1,0 +1,446 @@
+* {
+  margin: auto;
+  padding: auto;
+  list-style: none;
+  text-decoration: none;
+  cursor: url(img/Group\ 155\ 2.svg) 6 6, auto;
+}
+body {
+  font-family: "DungGeunMo";
+}
+
+@font-face {
+  font-family: "DungGeunMo";
+  src: url(font/DungGeunMo.woff);
+}
+.warp {
+  width: 1440px;
+  height: 100vh;
+  display: flex;
+  background: #fbf9ff;
+  overflow: hidden;
+}
+section {
+  width: calc(1440px - 64px);
+  height: calc(100vh - 64px);
+  /* display: flex; */
+  background-color: beige;
+  flex-direction: row;
+  border-radius: 15px;
+  border: 13px solid #e5cde3;
+  background: linear-gradient(180deg, #d5bded 0%, #facbe3 100%);
+  position: relative;
+  overflow: hidden;
+  z-index: 99;
+  font-family: url(font/DungGeunMo.eot);
+}
+.button {
+  position: absolute;
+  z-index: 99999;
+  top: 520px;
+  left: 450px;
+  text-shadow: 4px 4px 0px #ffffff;
+  font-family: DungGeunMo;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0px; /* 0% */
+  letter-spacing: 18.56px;
+}
+.button > a {
+  display: inline-block;
+  position: absolute;
+  top: 84px;
+  left: 126px;
+  color: #a17392;
+}
+.logo {
+  display: flex;
+  position: absolute;
+  z-index: 9999;
+  align-items: center;
+  top: -720px;
+  right: 10px;
+  animation: bouncing 1s linear infinite; /* 애니메이션 적용 */
+  position: relative;
+}
+@keyframes bouncing {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(0px, 10px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+.left_top {
+  z-index: 99;
+  position: absolute;
+}
+.right_top {
+  z-index: 99;
+  position: absolute;
+}
+.left_bottom {
+  z-index: 99;
+  position: absolute;
+}
+.right_bottom {
+  z-index: 99;
+  position: absolute;
+}
+.cloud1 {
+  position: absolute;
+  top: 508px;
+  left: -170px;
+  z-index: 3;
+}
+/* @keyframes cloud {
+  0% {
+    transform: translate(-10px, 0px);
+  }
+  10% {
+    transform: translate(-50px, 20px);
+  }
+  20% {
+    transform: translate(-100px, 40px);
+  }
+  30% {
+    transform: translate(-150px, 20px);
+  }
+  40% {
+    transform: translate(-200px, 40px);
+  }
+  50% {
+    transform: translate(-250px, 20px);
+  }
+  60% {
+    transform: translate(-300px, 40px);
+  }
+  70% {
+    transform: translate(-350px, 20px);
+  }
+  80% {
+    transform: translate(-400px, 40px);
+  }
+  90% {
+    transform: translate(-500px, 20px);
+  }
+  100% {
+    transform: translate(-600px, 20px);
+  }
+} */
+.cloud2 {
+  position: absolute;
+  top: 588px;
+  left: 70px;
+  z-index: 4;
+}
+/* @keyframes cloud2 {
+  0% {
+    transform: translate(-10px, 0px);
+  }
+  10% {
+    transform: translate(-30px, 0px);
+  }
+  20% {
+    transform: translate(-60px, 20px);
+  }
+  30% {
+    transform: translate(-90px, 0px);
+  }
+  40% {
+    transform: translate(-120px, 20px);
+  }
+  50% {
+    transform: translate(-150px, 0px);
+  }
+  60% {
+    transform: translate(-180px, 20px);
+  }
+  70% {
+    transform: translate(-210px, 0px);
+  }
+  80% {
+    transform: translate(-240px, 20px);
+  }
+  90% {
+    transform: translate(-270px, 0px);
+  }
+  100% {
+    transform: translate(-300px, 20px);
+  }
+} */
+.cloud3 {
+  position: absolute;
+  top: 358px;
+  left: -100px;
+  z-index: 1;
+}
+.cloud4 {
+  position: absolute;
+  top: 700px;
+  left: -100px;
+  z-index: 5;
+  animation: cloud2 20s linear infinite; /* 애니메이션 적용 */
+}
+.cloud5 {
+  position: absolute;
+  top: 10px;
+  left: -140px;
+  z-index: 3;
+}
+.cloud6 {
+  position: absolute;
+  top: 87px;
+  left: -250px;
+  z-index: 10;
+  width: 600px;
+  animation: cloud 75s linear infinite; /* 애니메이션 적용 */
+}
+.cloud7 {
+  position: absolute;
+  top: 17px;
+  left: 104px;
+  z-index: 0;
+}
+.cloud8 {
+  position: absolute;
+  top: 66px;
+  left: 802px;
+  z-index: 0;
+}
+.cloud9 {
+  position: absolute;
+  top: 54px;
+  left: 1200px;
+  z-index: 0;
+}
+.cloud10 {
+  position: absolute;
+  top: 254px;
+  left: 1000px;
+  z-index: 0;
+  animation: cloud 20s linear infinite; /* 애니메이션 적용 */
+}
+.cloud11 {
+  position: absolute;
+  top: 0px;
+  left: 1200px;
+  z-index: 0;
+  animation: cloud2 20s linear infinite; /* 애니메이션 적용 */
+}
+.cloud12 {
+  position: absolute;
+  top: 695px;
+  left: 1000px;
+  z-index: 0;
+  width: 600px;
+}
+.star {
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.star1 {
+  position: absolute;
+  top: 508px;
+  right: 34px;
+  animation: star2 3s linear infinite; /* 애니메이션 적용 */
+}
+.star2 {
+  position: absolute;
+  top: 288px;
+  right: 453px;
+}
+.star3 {
+  position: absolute;
+  top: 108px;
+  right: 764px;
+  animation: star 3s linear infinite; /* 애니메이션 적용 */
+}
+.star4 {
+  position: absolute;
+  top: 25px;
+  right: 564px;
+}
+.star5 {
+  position: absolute;
+  top: 418px;
+  right: 953px;
+  animation: star2 2s linear infinite; /* 애니메이션 적용 */
+}
+.star6 {
+  position: absolute;
+  top: 242px;
+  right: 1164px;
+}
+.star7 {
+  position: absolute;
+  top: 308px;
+  right: 1064px;
+}
+.star8 {
+  position: absolute;
+  top: 646px;
+  right: 1095px;
+  animation: star2 4s linear infinite; /* 애니메이션 적용 */
+}
+.star9 {
+  position: absolute;
+  top: 308px;
+  right: 269px;
+  animation: star 3s linear infinite; /* 애니메이션 적용 */
+}
+.star10 {
+  position: absolute;
+  top: 875px;
+  right: 800px;
+  animation: star 3s linear infinite; /* 애니메이션 적용 */
+}
+.star11 {
+  position: absolute;
+  top: 693px;
+  right: 477px;
+}
+@keyframes star {
+  0% {
+    transform: scale(1);
+
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.1);
+
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+
+    opacity: 0.5;
+  }
+}
+@keyframes star2 {
+  0% {
+    transform: scale(0.8);
+
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+
+    opacity: 0.5;
+  }
+}
+.sayHello {
+  display: none;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  /* background-color: #0056b3; */
+}
+
+#output {
+  margin-top: 10px;
+}
+
+.showing {
+  display: block;
+}
+h4 {
+  display: none;
+}
+.showing {
+  display: block;
+}
+.delete {
+  display: none;
+}
+.nameinput {
+  z-index: 9999999;
+  width: 200px;
+  height: 100px;
+  background-color: #a17392;
+}
+.form_warp {
+  /* background-color: aqua; */
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* border: 1px solid black; */
+  margin-top: -110px;
+  margin-left: -43px;
+}
+.formLine {
+  display: flex;
+  /* background-color: blue;
+  border: 3px solid rgb(153, 0, 255);
+  width: 300px;
+  height: 80px; */
+  z-index: 1;
+}
+.js-sayHello > text {
+  line-height: 24px;
+  font-size: 20px;
+}
+.js-sayHello {
+  display: none;
+  /* width: 250px; */
+  /* height: 50px; */
+  /* background-color: rgb(43, 255, 0); */
+  position: absolute;
+  /* top: 80px; */
+  /* right: 60px; */
+  z-index: 0;
+  /* font-size: 24px;
+  padding: 20px 50px; */
+}
+
+.showing {
+  display: block;
+}
+.nameinput {
+  width: 384px;
+  height: 80px;
+  font-size: 18px;
+  text-align: center;
+}

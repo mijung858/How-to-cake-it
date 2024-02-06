@@ -1,0 +1,171 @@
+* {
+  margin: 0px auto;
+  padding: 0 auto;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  overflow-x: hidden;
+}
+.wrap {
+  width: 100%;
+  position: relative;
+}
+.cursor {
+  position: absolute;
+
+  width: 460.097px;
+  height: 406.347px;
+  transform: rotate(-56.73deg);
+  border-radius: 860.097px;
+  background: #c9d2f7;
+  filter: blur(45px);
+  flex-shrink: 0;
+  z-index: -10000;
+}
+section {
+  height: 100vh;
+}
+.inner {
+  width: calc(100% - 120px);
+  height: 100vh;
+}
+header {
+  width: calc(100% - 120px);
+  height: 76px;
+  background-color: rgb(255, 221, 194);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+header > h1 {
+  line-height: 76px;
+  margin: 0px;
+}
+nav {
+  height: 76px;
+  line-height: 76px;
+}
+.link_warp {
+  display: flex;
+  padding-left: 60px;
+
+  width: fit-content;
+}
+
+.link_warp > li {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  padding-right: 70px;
+}
+.btn_warp {
+  margin: 0px;
+  display: flex;
+  gap: 5px;
+}
+button {
+  display: flex;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  align-items: center;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 999px;
+  gap: 5px;
+}
+
+.slogun {
+  padding-top: 300px;
+  color: #000;
+  font-family: Inter;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 600;
+  display: inline-flex;
+  flex-direction: row;
+  /* gap: 30px; */
+  gap: 21px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.first_txt {
+  background-color: chocolate;
+}
+.secont_txt {
+  display: flex;
+  margin: 0px;
+  align-items: center;
+}
+
+#flip {
+  display: inline;
+  background-color: rgb(251, 202, 255);
+  height: 90px;
+  overflow-y: hidden;
+}
+
+#flip > div > div {
+  margin: 0px;
+  display: inline;
+  z-index: 999;
+  width: fit-content;
+  width: 100%;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+#flip div {
+  color: #000;
+  height: 90px;
+  width: 100%;
+}
+.fliptxt1 {
+  background-color: blueviolet;
+}
+.fliptxt2 {
+  background-color: rgb(226, 43, 43);
+}
+.fliptxt3 {
+  background-color: rgb(226, 147, 43);
+}
+@keyframes show {
+  0% {
+    margin-top: -270px;
+  }
+  5% {
+    margin-top: -180px;
+  }
+  33% {
+    margin-top: -180px;
+  }
+  38% {
+    margin-top: -90px;
+  }
+  66% {
+    margin-top: -90px;
+  }
+  71% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
+.third_txt {
+  width: 313.5px;
+  height: 1px;
+  background-color: #000000;
+  margin-left: 42px;
+  margin-right: 42px;
+}
+.last_txt {
+  background-color: chocolate;
+}
