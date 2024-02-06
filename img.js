@@ -1,60 +1,38 @@
 $(document).ready(function () {
   $(".single-item").slick();
-});
 
-// var cake = "img/딸기케이크.png";
+  var strawberryCake = "img/cake.png";
+  var CherryHam = "img/cherryHam.png";
+  var dish = "img/dish.png";
 
-// var selectedItems = {
-//   myImg1: false,
-//   myImg2: false,
-//   myImg3: false,
-// };
+  var selectedItems = {
+      myImg1: false,
+      myImg2: false,
+      myImg3: false,
+      myImg4: false,
+      myImg5: false,
+      myImg6: false,
+  };
 
-// $(".box img").click(function () {
-//   var id = $(this).attr("id");
-//   selectedItems[id] = !selectedItems[id];
-//   toggleSetImage();
-// });
+  $(".box img").click(function () {
+      var id = $(this).attr("id");
+      selectedItems[id] = !selectedItems[id];
+      toggleSetImage();
+      $(this).toggleClass("clicked"); // Add or remove the "clicked" class
+  });
 
-// function toggleSetImage() {
-//   if (selectedItems.myImg1 && selectedItems.myImg2 && selectedItems.myImg3) {
-//     // All three images are selected
-//     setTimeout(function () {
-//       $("#stagezone").append(
-//         `<img src='${cake}' class="image-layer" style="width: 400px; height: 400px;">`
-//       );
-//     }); // Delay for 5 seconds (5000 milliseconds)
-//   }
-// }
-$(document).ready(function () {
-  $(".single-item").slick();
-});
+  function toggleSetImage() {
+      var allSelected1 = selectedItems.myImg1 && selectedItems.myImg2 && selectedItems.myImg3;
+      var allSelected2 = selectedItems.myImg4 && selectedItems.myImg5 && selectedItems.myImg6;
 
-var cake = "img/딸기케이크.png";
+      $("#stagezone").empty(); // Remove existing images
 
-var selectedItems = {
-  myImg1: false,
-  myImg2: false,
-  myImg3: false,
-};
-
-$(".box img").click(function () {
-  var id = $(this).attr("id");
-  selectedItems[id] = !selectedItems[id];
-  toggleSetImage();
-  $(this).toggleClass("clicked"); // Add or remove the "clicked" class
-});
-
-function toggleSetImage() {
-  if (selectedItems.myImg1 && selectedItems.myImg2 && selectedItems.myImg3) {
-    // All three images are selected
-    $("#stagezone").addClass("red"); // Change the background color to red
-
-    setTimeout(function () {
-      $("#stagezone").removeClass("red"); // Remove the red background color
       $("#stagezone").append(
-        `<img src='${cake}' class="image-layer" style="width: 400px; height: 400px;">`
+          `<img src='${allSelected1 ? strawberryCake : (allSelected2 ? CherryHam : 'img/bowl.png')}' alt="">`
       );
-    }, 3000); // Delay for 3 seconds (3000 milliseconds) before displaying the cake image
+
+      if (allSelected1 || allSelected2) {
+          $("#stagezone").append(`<img src='${dish}' alt="">`);
+      }
   }
-}
+});

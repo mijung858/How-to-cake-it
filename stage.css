@@ -36,7 +36,7 @@
   position: absolute;
 
   align-items: center;
-  top: -960px;
+  top: -910px;
   right: 10px;
   animation: bouncing 1s linear infinite; /* 애니메이션 적용 */
   position: relative;
@@ -169,24 +169,28 @@ section {
 .stage {
   width: 500px;
   height: 500px;
-  background-color: rgb(214, 214, 214);
+
   display: flex;
   flex-direction: column;
 }
 #stagezone {
   width: 350px;
   height: 300px;
-  background-color: rgb(240, 240, 240);
+
   position: relative;
-  overflow: hidden;
+
+}
+#stagezone>img{
+  position: absolute;
+    left: -76px;
+    top: 124px;    width: 142%;
+
 }
 .box img.clicked {
   opacity: 0.7; /* Adjust the opacity as needed */
 }
 
-#stagezone.red {
-  background-color: red; /* Change the background color as needed */
-}
+
 
 .slider_wrap {
   display: flex;
