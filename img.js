@@ -1,3 +1,5 @@
+
+
 // $(document).ready(function () {
 //     $(".single-item").slick();
 
@@ -5,7 +7,8 @@
 //     var CherryHam = "img/cherryHam.png";
 //     var StrawberryHam = "img/strawberryham.png";
 //     var dish = "img/dish.png";
-
+//     var nameTag = "img/nametag.png";
+//     var Clock= "img/clock.png";
 //     var selectedItems = {
 //         myImg1: false,
 //         myImg2: false,
@@ -33,11 +36,11 @@
 //         $("#stagezone").empty(); // Remove existing images
 
 //         if (allSelected1) {
-//             $("#stagezone").append(`<img src='${strawberryCake}' alt=""style="top:-25px;">`);
+//             $("#stagezone").append(`<img src='${strawberryCake}' alt="" style="top: -25px;">`);
 //         } else if (allSelected2) {
-//             $("#stagezone").append(`<img src='${CherryHam}' alt=""style="top:-15px;">`);
+//             $("#stagezone").append(`<img src='${CherryHam}' alt="" style="top: -15px;">`);
 //         } else if (allSelected3) {
-//             $("#stagezone").append(`<img src='${StrawberryHam}' alt=""style="top:-25px;">`);
+//             $("#stagezone").append(`<img src='${StrawberryHam}' alt="" style="top: -25px;">`);
 //         } else {
 //             $("#stagezone").append(`<img src='img/bowl.png' alt="">`);
 //         }
@@ -45,9 +48,17 @@
 //         if (allSelected1 || allSelected2 || allSelected3) {
 //             $("#stagezone").append(`<img src='${dish}' alt="" style="z-index: -10;">`);
 //         }
+//         if (allSelected1 || allSelected2 || allSelected3) {
+//             $("#stagezone").append(`<img src='${nameTag}' alt="" style="z-index: 10;     top: 360px;" >`);
+//         }
+
+//         // Check if three or more images are selected
+//         var selectedCount = Object.values(selectedItems).filter(Boolean).length;
+//         if (selectedCount >= 4) {
+//             alert("네가지 재료만 선택해줘!");
+//         }
 //     }
 // });
-
 $(document).ready(function () {
     $(".single-item").slick();
 
@@ -56,6 +67,7 @@ $(document).ready(function () {
     var StrawberryHam = "img/strawberryham.png";
     var dish = "img/dish.png";
     var nameTag = "img/nametag.png";
+    var Clock = "img/clock.png";
     var selectedItems = {
         myImg1: false,
         myImg2: false,
@@ -83,7 +95,9 @@ $(document).ready(function () {
         $("#stagezone").empty(); // Remove existing images
 
         if (allSelected1) {
-            $("#stagezone").append(`<img src='${strawberryCake}' alt="" style="top: -25px;">`);
+            setTimeout(function() {
+                $("#stagezone").append(`<img src='${strawberryCake}' alt="" style="top: -25px;">`);
+            }, 6000); // 딸기 케이크 이미지는 6초 후에 나타나도록 설정
         } else if (allSelected2) {
             $("#stagezone").append(`<img src='${CherryHam}' alt="" style="top: -15px;">`);
         } else if (allSelected3) {
@@ -94,9 +108,14 @@ $(document).ready(function () {
 
         if (allSelected1 || allSelected2 || allSelected3) {
             $("#stagezone").append(`<img src='${dish}' alt="" style="z-index: -10;">`);
-        }
-        if (allSelected1 || allSelected2 || allSelected3) {
-            $("#stagezone").append(`<img src='${nameTag}' alt="" style="z-index: 10;     top: 360px;" >`);
+            $("#stagezone").append(`<img src='${nameTag}' alt="" style="z-index: 10; top: 360px;">`);
+            if (allSelected1) {
+                setTimeout(function() {
+                    $("#stagezone").append(`<img src='${Clock}' alt="" style=" z-index: 99990;
+                    top: -196px;
+                    width: 71%;">`);
+                },3000 ); // 시계 이미지는 3초 후에 나타나도록 설정
+            }
         }
 
         // Check if three or more images are selected
