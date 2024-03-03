@@ -34,16 +34,30 @@
   right: 4%;
 }
 .script_wrap {
-  border: 1px solid red;
   position: relative;
   width: 955px;
-  height: 680px;
+  height: 453px;
 }
 .scriptslider {
   width: 755px;
-  height: 500px;
-  border: 1px solid red;
+  height: 300px;
+
   position: absolute;
-  top: 16%;
+  top: 21%;
   right: 10%;
+}
+.tutorial_explan {
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.tutorial_explan p {
+  color: #424141;
+
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
