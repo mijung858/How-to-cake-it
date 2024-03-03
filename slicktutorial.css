@@ -4,12 +4,12 @@
 
   display: block;
   box-sizing: border-box;
-
+  border: 2px solid blue;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-
+  background-color: aquamarine;
   -webkit-touch-callout: none;
   -khtml-user-select: none;
   -ms-touch-action: pan-y;

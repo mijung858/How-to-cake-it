@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="stage.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="slick.min.js"></script>
+    <link rel="stylesheet" href="slick-tutorial.css" />
+    <link rel="stylesheet" href="slicktutorial.css" />
+    <link rel="stylesheet" href="commom.css" />
+    <link rel="stylesheet" href="tutorial.css" />
+  </head>
+  <body>
+    <div class="warp">
+      <section>
+        <div class="back"><img src="img/BG 1.png" alt="" /></div>
+
+        <div class="tutorial_imgwrap">
+          <div class="script_wrap">
+            <img
+              class="script"
+              src="tutorial_img/Tutorial_Background 2.png"
+              alt=""
+            />
+            />
+            <div class="scriptslider slider">
+              <div class="one-time">
+                <div class="box">
+                  <img
+                    id="myImg10"
+                    src="img/mushroom.png"
+                    alt=""
+                    width="500px"
+                  />
+                  <!-- 버섯 10-->
+                </div>
+                <div class="box">
+                  <img id="myImg9" src="img/green.png" alt="" />
+                  <!-- 브로콜리 9-->
+                </div>
+                <div class="box">
+                  <img id="myImg2" src="img/love.png" alt="" />
+                  <!-- 사랑물약 2-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <img
+            class="tutorial_ham"
+            src="tutorial_img/tutorial_ham 1.png"
+            alt=""
+          />
+          <img
+            class="tutorial_cake"
+            src="tutorial_img/tutorialcake 1.png"
+            alt=""
+          />
+        </div>
+      </section>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $(".one-time").slick();
+      });
+    </script>
+  </body>
+</html>

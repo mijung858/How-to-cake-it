@@ -1,0 +1,44 @@
+* {
+  margin: auto;
+  padding: auto;
+  list-style: none;
+  text-decoration: none;
+  cursor: url(img/Group\ 155\ 2.svg) 6 6, auto;
+}
+body {
+  font-family: "DungGeunMo";
+}
+.Bg > img {
+  width: 101%;
+}
+button {
+  font-family: "DungGeunMo";
+}
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.warp {
+  width: 1440px;
+  height: 1024px;
+  display: flex;
+  background: #fbf9ff;
+  overflow: hidden;
+}
+section {
+  width: calc(1440px - 64px);
+  height: calc(1024px - 64px);
+  /* display: flex; */
+  background-color: beige;
+  flex-direction: row;
+  border-radius: 15px;
+  border: 13px solid #e5cde3;
+  background: linear-gradient(180deg, #d5bded 0%, #facbe3 100%);
+  position: relative;
+  overflow: hidden;
+  z-index: 99;
+  font-family: url(font/DungGeunMo.eot);
+}

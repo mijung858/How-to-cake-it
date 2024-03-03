@@ -1,0 +1,49 @@
+.back {
+  height: 100%;
+}
+
+.tutorial_imgwrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.script {
+  position: absolute;
+}
+
+.tutorial_ham {
+  position: absolute;
+  top: 61%;
+  right: 4%;
+}
+
+.tutorial_cake {
+  position: absolute;
+  top: 60%;
+  right: 73%;
+}
+
+.btn_prev {
+  position: absolute;
+  top: 50%;
+  right: 91%;
+}
+.btn_next {
+  position: absolute;
+  top: 50%;
+  right: 4%;
+}
+.script_wrap {
+  border: 1px solid red;
+  position: relative;
+  width: 955px;
+  height: 680px;
+}
+.scriptslider {
+  width: 755px;
+  height: 500px;
+  border: 1px solid red;
+  position: absolute;
+  top: 16%;
+  right: 10%;
+}
