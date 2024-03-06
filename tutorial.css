@@ -61,3 +61,16 @@
   font-weight: 400;
   line-height: normal;
 }
+.tutorial_explan {
+  overflow: hidden; /* Ensures the text will be cut off */
+  border-right: .15em solid orange; /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the text on a single line */
+  margin: 0; /* Resets margin for better positioning */
+}
+.tutorial_explan {
+  display: none; /* 기본적으로 모두 숨김 */
+}
+
+.tutorial_explan.active {
+  display: block; /* active 클래스가 추가되면 표시 */
+}
