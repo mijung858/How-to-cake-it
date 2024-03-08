@@ -63,7 +63,45 @@
 }
 .tutorial_explan {
   overflow: hidden; /* Ensures the text will be cut off */
-  border-right: .15em solid orange; /* The typewriter cursor */
+   /* The typewriter cursor */
   white-space: nowrap; /* Keeps the text on a single line */
   margin: 0; /* Resets margin for better positioning */
+}
+.img_Ex{
+  display: flex;
+  width: 100%;
+}
+.img_Ex img{
+  width: 80%;
+  
+}
+.imgwrap {
+  position: relative;
+}
+.imgwrap p{
+  position: absolute;
+  top: 12px;
+  color: #F3D5F3;
+  text-shadow: 5px 1px 0px #FFF;
+  -webkit-text-stroke-width: 3;
+  -webkit-text-stroke-color: #D2BCEF;
+  font-family: DungGeunMo;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  left: 61px;
+}
+.stage_Link{
+  width: 100%;
+  display: flex;
+}
+.stage_Link a{
+  color: #6e456c;
+  color: #9D819B;
+  font-family: DungGeunMo;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0px; /* 0% */
 }

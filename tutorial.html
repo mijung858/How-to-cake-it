@@ -1,139 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="stage.css" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="stage.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="slick.min.js"></script>
+  <link rel="stylesheet" href="slick-tutorial.css">
+  <link rel="stylesheet" href="slicktutorial.css">
+  <link rel="stylesheet" href="commom.css">
+  <link rel="stylesheet" href="tutorial.css">
+</head>
+<body>
+  <div class="warp">
+    <section>
+      <div class="back"><img src="img/BG 1.png" alt=""></div>
 
-    <script src="slick.min.js"></script>
-    <link rel="stylesheet" href="slick-tutorial.css" />
-    <link rel="stylesheet" href="slicktutorial.css" />
-    <link rel="stylesheet" href="commom.css" />
-    <link rel="stylesheet" href="tutorial.css" />
-  </head>
-  <body>
-    <div class="warp">
-      <section>
-        <div class="back"><img src="img/BG 1.png" alt="" /></div>
+      <div class="tutorial_imgwrap">
+        <div class="script_wrap">
+          <img class="script" src="tutorial_img/Tutorial_Background 2.png" alt="" />
 
-        <div class="tutorial_imgwrap">
-          <div class="script_wrap">
-            <img
-              class="script"
-              src="tutorial_img/Tutorial_Background 2.png"
-              alt=""
-            />
-
-            <div class="scriptslider slider">
-              <div class="one-time">
-                <div class="box" style="background-color: aqua;">
-                  <p class="tutorial_explan">
-                  </p>
-                  <!--튜토리얼 1설명-->
+          <div class="scriptslider slider">
+            <div class="one-time">
+              <div class="box" >
+                <p class="tutorial_explan"></p>
+                <!--튜토리얼 1설명-->
+              </div>
+              <div class="box" >
+                <p class="tutorial_explan TWO"></p>
+                <!-- 튜토리얼2설명-->
+              </div>
+              <div class="box" >
+                <p class="tutorial_explan THREE"></p>
+                <!--튜토리얼3설명-->
+              </div>
+              <div class="box" >
+                <p class="tutorial_explan detaile" style="height: 162px;"></p>
+                <div class="img_Ex">
+                  <div class="imgwrap"><img src="img/box 1.png" alt=""><p>?</p></div>
+                  <div class="imgwrap"><img src="img/box 1.png" alt=""><p>?</p></div>
+                  <div class="imgwrap"><img src="img/box 1.png" alt=""><p>?</p></div>
+                  <div class="imgwrap"><img src="img/box 1.png" alt=""><p>?</p></div>
                 </div>
-                <div class="box" style="background-color: blanchedalmond;">
-                  <p class="tutorial_explan TWO"></p>
-                  <!-- 튜토리얼2설명-->
-                </div>
-                <div class="box" style="background-color: burlywood;">
-                  <p class="tutorial_explan THREE"></p>
-                  <!--튜토리얼3설명-->
-                </div>
-                <div class="box" style="background-color: rgb(222, 135, 135);">
-                  <p class="tutorial_explan FOUR">
-                  
-                  </p>
-                  <a href="stage.html">스테이지 링크</a>
-                  <!--튜토리얼3설명-->
-                </div>
+                
+                <!--튜토리얼설명-->
+              </div>
+              <div class="box" >
+                <p class="tutorial_explan FOUR" style="height: 246px;"></p>
+                <div class="stage_Link"> <a href="stage.html">LET’S CAKE IT</a></div>
+               
+                <!--튜토리얼설명끝-->
               </div>
             </div>
           </div>
-          <img
-            class="tutorial_ham"
-            src="tutorial_img/tutorial_ham 1.png"
-            alt=""
-          />
-          <img
-            class="tutorial_cake"
-            src="tutorial_img/tutorialcake 1.png"
-            alt=""
-          />
+          <!-- Navigation Arrows -->
+          <button class="slick-prev">Previous</button>
+          <button class="slick-next">Next</button>
         </div>
-      </section>
-    </div>
+        <img class="tutorial_ham" src="tutorial_img/tutorial_ham 1.png" alt="" />
+        <img class="tutorial_cake" src="tutorial_img/tutorialcake 1.png" alt="" />
+      </div>
+    </section>
+  </div>
 
-    <script>
-      $(document).ready(function () {
-          $(".one-time").slick({
-              autoplay: false, // 자동 재생 비활성화
-              dots: false,
-              infinite: false,
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              adaptiveHeight: true,
-              arrows: false,
-              vertical: false
-          });
-
-          // 타이핑 애니메이션 함수
-          function typeWriter(text, i, target, fnCallback) {
-              if (i < text.length) {
-                  // 텍스트가 모두 타이핑되지 않은 경우
-                  $(target).html(text.substring(0, i + 1)); // 타이핑 중인 텍스트를 표시
-                  setTimeout(function () {
-                      typeWriter(text, i + 1, target, fnCallback);
-                  }, 100); // 타이핑 속도 (100밀리초마다)
-              } else if (typeof fnCallback == "function") {
-                  setTimeout(fnCallback, 1000); // 타이핑 완료 후 대기 시간 (1초)
-              }
-          }
-
-          // 텍스트 애니메이션 시작 함수
-          function startTextAnimation(texts, index, target) {
-              if (index < texts.length) {
-                  // Call typewriter function
-                  typeWriter(texts[index], 0, target, function () {
-                      startTextAnimation(texts, index + 1, target); // Call the next iteration
-                  });
-              }
-          }
-
-          // Data for Typing Animation
-          var dataText1 = [
-              "안녕? 전설의 케이크를 찾으러 온걸 환영해.."
-          ];
-          var dataText2 = [
-              "전설의 케이크를 만들려면 4가지 재료가 필요해"
-          ];
-          var dataText3 = [
-              "4가지 재료에 대해 설명해줄게"
-          ];
-          var dataText4 = [
-              "그럼 케이크를 만들러 가볼까?"
-          ];
-
-          // Start Animation on Document Load
-          $(document).ready(function () {
-              startTextAnimation(dataText1, 0, '.tutorial_explan');
-              startTextAnimation(dataText2, 0, '.tutorial_explan.TWO');
-              startTextAnimation(dataText3, 0, '.tutorial_explan.THREE');
-              startTextAnimation(dataText4, 0, '.tutorial_explan.FOUR');
-          });
-
-          // 슬라이드 변경 후 텍스트 애니메이션 시작
-          $(".one-time").on('afterChange', function (event, slick, currentSlide) {
-              $('.tutorial_explan').removeClass('active'); // 모든 tutorial_explan 요소의 active 클래스 제거
-              $('.tutorial_explan').eq(currentSlide).addClass('active'); // 현재 슬라이드에 해당하는 tutorial_explan 요소에 active 클래스 추가
-              var currentText = eval("dataText" + (currentSlide + 1)); // 현재 슬라이드에 해당하는 텍스트 데이터 배열 선택
-              startTextAnimation(currentText, 0, '.tutorial_explan.active'); // 현재 슬라이드에 해당하는 텍스트를 시작하도록 호출
-          });
-
+  <script>
+    $(document).ready(function () {
+      $(".one-time").slick({
+        autoplay: false,
+        dots: false,
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        arrows: true,
+        prevArrow: $('.slick-prev'),
+        nextArrow: $('.slick-next'),
+        vertical: false
       });
 
+      function typeWriter(text, i, target, fnCallback) {
+        if (i < text.length) {
+          $(target).html(text.substring(0, i + 1));
+          setTimeout(function () {
+            typeWriter(text, i + 1, target, fnCallback);
+          }, 100);
+        } else if (typeof fnCallback == "function") {
+          setTimeout(fnCallback, 1000);
+        }
+      }
+
+      function startTextAnimation(texts, index, target) {
+        if (index < texts.length) {
+          typeWriter(texts[index], 0, target, function () {
+            startTextAnimation(texts, index + 1, target);
+          });
+        }
+      }
+
+      var dataText1 = [
+        "안녕? 전설의 케이크를 찾으러 온걸 환영해.."
+      ];
+      var dataText2 = [
+        "전설의 케이크를 만들려면 4가지 재료가 필요해"
+      ];
+      var dataText3 = [
+        "4가지 재료에 대해 설명해줄게"
+      ];
+      var dataText4 = [
+        "각각의 재료를 한가지씩 골라서 섞어주면....마법의 케이크가 완성된단다."
+      ];
+      var dataText5 = [
+        "그럼 케이크를 만들러 가볼까?"
+      ];
+
+      $(document).ready(function () {
+        startTextAnimation(dataText1, 0, '.tutorial_explan');
+        startTextAnimation(dataText2, 0, '.tutorial_explan.TWO');
+        startTextAnimation(dataText3, 0, '.tutorial_explan.THREE');
+        startTextAnimation(dataText4, 0, '.tutorial_explan.detaile');
+        startTextAnimation(dataText5, 0, '.tutorial_explan.FOUR');
+      });
+
+      $(".one-time").on('afterChange', function (event, slick, currentSlide) {
+        $('.tutorial_explan').removeClass('active');
+        $('.tutorial_explan').eq(currentSlide).addClass('active');
+        var currentText = eval("dataText" + (currentSlide + 1));
+        startTextAnimation(currentText, 0, '.tutorial_explan.active');
+      });
+
+    });
+
   </script>
-  </body>
+</body>
 </html>
