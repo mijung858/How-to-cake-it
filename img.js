@@ -69,7 +69,7 @@ $(document).ready(function () {
     var GreenHam = "img/stage_result/brocoliham.png";
      var mushroomHam = "img/stage_result/zombie ham.png";
      var mushroomcake = "img/stage_result/mushroomcake.png";
-
+     var dust = "img/stage_result/dust.png";
     var nameTag = "img/nametag.png";
     
     var selectedItems = {
